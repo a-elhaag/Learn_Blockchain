@@ -12,10 +12,12 @@ contract SimpleStorage{
 
     person internal p= person(1,"Joe");
 
+    
+
     person[] public list_of_persons; 
     mapping(string => uint) public nameToFavNum;
 
-    function setNum(int256 x) public {
+    function setNum(int256 x) public virtual  {
         num = x;
     }
 
@@ -28,5 +30,6 @@ contract SimpleStorage{
         nameToFavNum[_name] = _num; 
     }
 
+  
 }
 
